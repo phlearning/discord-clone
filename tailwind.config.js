@@ -58,7 +58,8 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			'discord-dark': '#313338'
+			'discord-dark': '#313338',
+			'sidebar-dark': '#1E1F22'
   		}
   	}
   },
