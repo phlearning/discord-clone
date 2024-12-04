@@ -1,6 +1,6 @@
 ## env example
 
-- Get your api key from Clerk for the authentication then paste in the `.env`
+- Get your api key from Clerk https://clerk.com/ for the authentication then paste in the `.env`
     ```
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
     CLERK_SECRET_KEY=sk_test_...
@@ -12,13 +12,19 @@
     NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
     NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
     ```
-- Get your api key from Neondb for the Database:
+- Get your api key from Neondb for the Database https://neon.tech/ :
     ```
     DATABASE_URL="postgresql://neondb_owner:..."
     ```
 - Get the api key for the upload from Uploadthing:
     ```
     UPLOADTHING_TOKEN=...
+    ```
+- Get the api key from livekit https://livekit.io/
+    ```
+    LIVEKIT_API_KEY=
+    LIVEKIT_API_SECRET=
+    NEXT_PUBLIC_LIVEKIT_URL=
     ```
 
 
