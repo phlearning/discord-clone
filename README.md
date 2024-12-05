@@ -9,7 +9,7 @@ It also uses `Clerk` for the authentication, `Prisma` for database Management, `
 There might be some problems with the sockets on vercel however you can still see the frontend. In case I also deployed on render:
 
 - Vercel:
-    https://webapp-chat-application-pm5yocync-pierre-henris-projects.vercel.app/
+    https://webapp-chat-application.vercel.app/
 - Render:
     https://webapp-chat.onrender.com
 
