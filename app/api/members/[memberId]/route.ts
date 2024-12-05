@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function DELETE(
     req: Request,
-    { params }: { params: { memberId: string }}
+    { params }: { params: Promise<{ memberId: string }>}
 ) {
     try {
         const profile = await currentProfile();
@@ -20,7 +20,7 @@ export async function DELETE(
             return new NextResponse("Server ID missing", { status: 400 });
         }
 
-        const { memberId } = params;
+        const { memberId } = await params;
         if (!memberId) {
             return new NextResponse("Member ID missing", { status: 400 });
         }
@@ -61,7 +61,7 @@ export async function DELETE(
 
 export async function PATCH(
     req: Request,
-    { params }: { params: { memberId: string }}
+    { params }: { params: Promise<{ memberId: string }>}
 ) {
     try {
         const profile = await currentProfile();

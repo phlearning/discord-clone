@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function PATCH(
     req: Request,
-    { params }: { params: { serverId: string }}
+    { params }: { params: Promise<{ serverId: string }>}
 ) {
     try {
         const profile = await currentProfile();
@@ -13,7 +13,7 @@ export async function PATCH(
             return new NextResponse("Unauthorized", { status: 401 });
         }
 
-        const { serverId } = params;
+        const { serverId } = await params;
         if (!serverId) {
             return new NextResponse("Server ID missing", { status: 400 });
         }

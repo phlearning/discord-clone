@@ -5,9 +5,9 @@ import { currentProfile } from "@/lib/current-profile";
 import { RedirectToSignIn } from "@clerk/nextjs";
 
 interface InviteCodePageProps {
-    params: {
+    params: Promise<{
         inviteCode: string;
-    };
+    }>;
 }
 
 const inviteCodePage = async ({

@@ -84,7 +84,7 @@ export const ChatItem = ({
         window.addEventListener("keydown", handleKeyDown);
 
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [])
+    }, []);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -114,7 +114,7 @@ export const ChatItem = ({
         form.reset({
             content: content,
         })
-    }, [content]);
+    }, [content, form]);
 
     const [fileType, setFileType] = useState<string | null>(null);
 
